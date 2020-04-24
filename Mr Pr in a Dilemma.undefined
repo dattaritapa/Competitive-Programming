@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	 int t;
+	cin>>t;
+	while(t>0)
+	{
+	    int a,b,c,d,x,y;
+	    cin>>a>>b>>c>>d;
+	    if(a>b)
+	    x=a-b;
+	    else 
+	    x=b-a;
+	    if(c>d)
+	    y=c-d;
+	    else
+	    y=d-c;
+	    if(x==y)
+	    cout<<"YES"<<endl;
+	    else
+	    {
+	        if(d!=c)
+	        {
+	            if(x%y==0)
+	            cout<<"YES"<<endl;
+	            else
+	            cout<<"NO"<<endl;
+	        }
+	        else 
+	        cout<<"NO"<<endl;
+	    }
+	    t--;
+	}
+	return 0;
+}
