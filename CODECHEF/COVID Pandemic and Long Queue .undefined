@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int testCases;
+    cin >> testCases;
+    
+    while(testCases--)
+    {
+        int counter=1;
+        int arraySize;
+        cin >> arraySize;
+        int array[arraySize];
+        
+        for(int a=0; a<arraySize; a++)
+        {
+            cin >> array[a];
+        }
+        for(int i=0; i<arraySize; i++)
+        {
+            if(array[i] == 1)
+            {
+                for(int j=i+1; j<(i+6); j++)
+                {
+                    if(array[j] == 1)
+                    {
+                        counter=0;
+                        cout << "NO" << endl;
+                        break;
+                    }
+                }
+            }
+            if(counter==0)
+                break;
+        }
+        if(counter==1)
+            cout << "YES" << endl;
+    }
+    return 0;
+}
