@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	long long yy,mm,dd,count=0;
+	char c1,c2;
+	cin>>yy>>c1>>mm>>c2>>dd;
+	if(mm==1 || mm==3 || mm==5 || mm==7 || mm==8 || mm==10 || mm==12)
+	{
+	    count=(31-dd)/2+1;
+	}
+	else
+	if(mm==4 || mm==6 || mm==9 || mm==11)
+	{
+	    count=((31-dd)/2)+16;
+	}
+	else
+	{
+	    if((yy%4==0 && yy%100!=0) || (yy%400==0 && yy%100==0))
+	    {
+	        count=((29-dd)/2)+1;
+	    }
+	    else
+	    {
+	        count=((31-dd)/2)+15;
+	    }
+	}
+	cout<<count<<endl;
+	
+	}
+	
+	return 0;
+}
