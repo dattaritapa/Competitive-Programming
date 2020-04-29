@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	long long t,i;
+	cin>>t;
+	while(t--)
+	{
+	    long long N,A,K;
+	    cin>>N>>A>>K;
+	    long long X=((A*N)*(N-1))+((K-1)*(((360*(N-2))-(2*A*N))));
+	    long long Y=N*(N-1);
+	    long long b=__gcd(X,Y);
+	    cout<<X/b<<" "<<Y/b<<endl;
+	}
+	return 0;
+}
