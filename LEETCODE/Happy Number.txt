@@ -1,0 +1,26 @@
+class Solution {
+public:
+    bool isHappy(int n) {
+        set <int> set;
+        int val,i;
+        while(1)
+        {
+            val=0;
+            while(n)
+            {
+                i=n%10;
+                val=val+i*i;
+                n=n/10;
+            }
+            if(val==1)
+                return (true);
+                else
+                    if(set.find(val)!=set.end())
+                        return (false);
+            set.insert(val);
+            n=val;
+            
+        }
+return (false);        
+    }
+};
