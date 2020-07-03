@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    long long l,r,k;
+	    cin>>l>>r>>k;
+	    if(l==r)
+	    {
+	        cout<<"1"<<endl;
+	    }
+	    else 
+	    {
+	        cout<<k<<endl;
+	    }
+	}
+	return 0;
+}

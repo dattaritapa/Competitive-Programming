@@ -1,0 +1,44 @@
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    string str;
+	    cin>>str;
+	    int sa,sb;
+	    cin>>sa>>sb;
+	    string::iterator itr;
+	    int a,b;
+	    int i=0;
+	    for(itr=str.begin();itr!=str.end();itr++){
+	        if(*itr=='A')
+	        a=i;
+	        if(*itr=='B')
+	        b=i;
+	        i++;
+	        
+	    }
+	    
+	    if(((b-a)%(sa+sb)==0))
+	    cout<<"unsafe"<<"\n";
+	    else
+	    cout<<"safe"<<"\n";
+	    
+	    
+	    
+	    
+	    
+	    
+	}
+	
+	
+	
+	
+	
+	
+	return 0;
+}

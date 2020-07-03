@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	long long int t,a,i,j,k,l,b;
+	cin>>t;
+	while(t--)
+	{
+		long long int n;
+		int A[20];
+		cin>>n;
+		a=n;
+		i=0;
+		while(a>0)
+		{
+			b=a%10;
+			A[i]=b;
+			i++;
+			a=a/10;
+		}
+		//cout<<i<<endl;
+		for(j=0;j<i;j++)
+		{
+			k=i-j-1;
+			
+			if(A[k]>A[k-1])
+			{
+				
+				for(l=k;l<i;l++)
+				A[l]=A[l+1];
+				break;
+			}
+		}
+		long long int n1=0;
+		for(j=0;j<i-1;j++)
+		{
+			n1=n1+(A[j]*pow(10,j));
+		}
+		cout<<n1<<endl;
+		
+	}
+}
