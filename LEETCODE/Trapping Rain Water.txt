@@ -1,0 +1,34 @@
+int trappingWater(int arr[], int n){
+        // Code here
+        int left = 1, right = n-2;
+        int left_max = arr[0], right_max = arr[n-1];
+        int water = 0;
+        
+        if(n<=2) return 0;
+        
+        while(left<=right)
+        {
+            if(left_max < right_max)
+            {
+            if(left_max < arr[left])
+            {
+                left_max = arr[left];
+            }
+            else
+            water += left_max - arr[left];
+            left++;
+            }
+            else
+            {
+                if(right_max < arr[right])
+                {
+                    right_max = arr[right];
+                }
+                else
+                water += right_max - arr[right];
+                right--;
+            }
+            
+        }
+        return water;
+    }
